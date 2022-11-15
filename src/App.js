@@ -14,7 +14,7 @@ import Error from "./pages/Error";
 
 const App = () => {
   const [auth, setAuth] = useState(
-    false
+    JSON.parse(localStorage.getItem("auth_token")) || false
   );
 
   const location = useLocation();
